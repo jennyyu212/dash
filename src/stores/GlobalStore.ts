@@ -104,9 +104,9 @@ export class GlobalStore {
         if (!this.newCollection) {
             this.newCollection = {parent, x, y}
         } else {
-            if (parent) { this.newNode.parent = parent; }
-            if (x) { this.newNode.x = x; }
-            if (y) { this.newNode.y = y; }
+            if (parent) { this.newCollection.parent = parent; }
+            if (x) { this.newCollection.x = x; }
+            if (y) { this.newCollection.y = y; }
         }
 
     }
@@ -240,13 +240,13 @@ export class GlobalStore {
             case Action.AddCollection:  
                 if (this.newCollection) {
                     let nodes = [];     
-                    const parent = this.newNode.parent;   
+                    const parent = this.newCollection.parent;   
                     const x = this.newCollection.x;
                     const y = this.newCollection.y; 
 
                     nodes.push(new NodeCollectionStore({ x: x, y: y, width: 300, height: 300, title: "New Collection", parentNode: parent as NodeCollectionStore, level: parent.level + 1}));
 
-                    this.newNode.parent.addNodes(nodes);
+                    this.newCollection.parent.addNodes(nodes);
                     this.newCollection = null;
                 }
                 break;

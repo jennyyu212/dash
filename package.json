@@ -1,7 +1,7 @@
 {
   "name": "dash",
   "version": "1.0.0",
-  "homepage": "https://jennyyu212.github.io/dash",
+  "homepage": "http://jennyyu212.github.io/dash",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -34,9 +34,9 @@
     "mobx": "^5.5.2",
     "mobx-react": "^5.3.5",
     "mobx-react-devtools": "^6.0.3",
-    "node-sass": "^4.11.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-rte": "^0.16.4"
+    "react-rte": "^0.16.4",
+    "sass": "^1.49.7"
   }
 }
