@@ -73281,13 +73281,13 @@ var GlobalStore = (function () {
         }
         else {
             if (parent) {
-                this.newNode.parent = parent;
+                this.newCollection.parent = parent;
             }
             if (x) {
-                this.newNode.x = x;
+                this.newCollection.x = x;
             }
             if (y) {
-                this.newNode.y = y;
+                this.newCollection.y = y;
             }
         }
     };
@@ -73362,11 +73362,11 @@ var GlobalStore = (function () {
             case Action.AddCollection:
                 if (this.newCollection) {
                     var nodes = [];
-                    var parent_2 = this.newNode.parent;
+                    var parent_2 = this.newCollection.parent;
                     var x = this.newCollection.x;
                     var y = this.newCollection.y;
                     nodes.push(new NodeCollectionStore_1.NodeCollectionStore({ x: x, y: y, width: 300, height: 300, title: "New Collection", parentNode: parent_2, level: parent_2.level + 1 }));
-                    this.newNode.parent.addNodes(nodes);
+                    this.newCollection.parent.addNodes(nodes);
                     this.newCollection = null;
                 }
                 break;
