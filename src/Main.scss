@@ -1,0 +1,22 @@
+html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Hind Siliguri', sans-serif;
+    overscroll-behavior-x: none;
+}
+
+.header {
+    width: 100%;
+    height: 25px;
+}
+
+$primary-blue: #1769aa

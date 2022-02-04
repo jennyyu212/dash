@@ -1,0 +1,37 @@
+@import "../../../Main";
+
+.treeview {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: fit-content;
+    overflow: scroll;
+    margin: 0 10px;
+}
+
+.level {
+    &.tree-folder {
+        width: 250px;
+    }
+
+    &.tree-node {
+        width: 500px;
+    }
+
+    padding: 10px 25px;
+    height: 100%;
+    border-right: solid #cfcfcf .5px;
+}
+
+.treenode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expanded {
+    font-weight: bolder;
+    color: $primary-blue;
+    // background-color: $primary-blue;
+}
